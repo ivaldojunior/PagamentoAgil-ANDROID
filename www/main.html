@@ -1,0 +1,80 @@
+<!-- pagamentoAgil -->
+<!doctype html>
+<html ng-app="pagamento-agil">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<meta name="theme-color" content="#71b1d1">
+		<title>Pagamento Ágil</title>
+		<!-- jquery -->
+		<link href="css/jquery/material-refresh.css" rel="stylesheet">
+		<!-- angular-animations -->
+		<link href="css/angular/animations.css" rel="stylesheet">
+		<link href="css/angular/material/material.css" rel="stylesheet">
+		<!-- bootstrap -->
+		<link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+		<!-- we css -->
+		
+		<link href="css/main.css" rel="stylesheet">
+		<link href="images/favicon.ico" rel="icon" >
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+		<link rel="stylesheet" href="css/angular/material/materialdesignicons.min.css">
+
+		<style>
+			*{
+				-webkit-transform: translate3d(0,0,0);
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<!-- div Loader -->
+		<div style="position:fixed;width:100%;height:100%;background:rgba(255,255,255,.5);z-index:100;display:none;" id="loadera">
+			<div class="col-xs-push-4 col-xs-4 text-center" style="top:50%;">
+				<md-progress-circular class="md-primary" md-mode="indeterminate" style="margin:0 auto;"></md-progress-circular>
+			</div>
+		</div>
+
+		<div id="fb-root"></div>
+
+		<!-- conteiner princial da aplicação -->
+		<md-content ng-view class="" id="content_angular"></md-content>	
+
+
+		<!-- Link cordova only 4 mobile version -->
+		<!-- -->
+			<script type="text/javascript" src="cordova.js"></script>
+		
+		<!--  angular  -->
+
+          <script src="js/angular/angular.min.js"></script>
+       	  <script src="js/angular/angular-route.js"></script>
+		  <script src="js/angular/angular-animate.js"></script>
+		  <script src="js/angular/angular-aria.min.js"></script>
+		  <script src="js/angular/material/material.js"></script>
+ 		<!-- -->
+
+
+        <!--  jquery  -->
+        <script src="js/jquery/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery/jqueryUI.js"></script>
+        <script src="js/jquery/material-refresh.min.js"></script>
+        <!--  bootstrap  -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!-- Linkify -->
+        <script src="js/linkify/linkify.min.js"></script>
+		<script src="js/linkify/linkify-jquery.min.js"></script>
+
+        <!-- we scripts -->
+        <script src="js/accessSoap.js"></script>
+        <script src="js/ngCore.js"></script>
+ 		<script src="js/controllers.js"></script>
+ 		<script src="js/system.js"></script>
+
+
+
+
+	</body>
+</html>

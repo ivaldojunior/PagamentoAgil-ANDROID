@@ -1,0 +1,58 @@
+<div class="white">
+
+	<md-toolbar class="md-accent hue-1 md-whiteframe-z1" style="background:#fff;">
+	    <h2 class="md-toolbar-tools">
+	      <span flex class="text-center">
+
+		      <md-button class="md-icon-button md-primary" style="float:left;" ng-click="verifyBack($event);">
+		      	<span  class="glyphicon glyphicon-chevron-left"></span>
+		      </md-button>
+
+	          <img src="images/logo.png" width="90" style="margin-left:-60px" >
+
+	      </span>
+	    </h2>
+	</md-toolbar>
+
+	<div class="col-xs-12 text-center">
+		<h2 class="md-title ptop-20 rosa_handson">Criar conta</h2>
+	</div>
+
+	<div class="col-md-push-3 col-md-6">
+
+		<form class="form-horizontal" role="form" id="formRegistroUser" style="margin-top:25px;">
+			<md-input-container flex class="texto-home tira-margem" style="font-size:14px">
+			  <label class="cinza-escuro">Nome</label>
+	          <input type="text" id="user_nome"  name="name" />
+	        </md-input-container>
+
+	        <md-input-container flex class="texto-home tira-margem" style="font-size:14px">
+			  <label class="cinza-escuro">Sobrenome</label>
+	          <input type="text" id="user_sobrenome"  name="name" />
+	        </md-input-container>
+
+			<md-input-container flex class="texto-home tira-margem" style="font-size:14px">
+			  <label class="cinza-escuro">Email</label>
+	          <input type="email" id="user_email"  name="email" />
+	        </md-input-container>
+
+			<md-input-container flex class="texto-home tira-margem" style="font-size:14px">
+			   <label class="cinza-escuro">Senha</label>
+	          <input type="password" id="user_senha"  name="password" ng-model="user.senha"/>
+	        </md-input-container>
+
+	        <md-input-container flex class="texto-home tira-margem" style="font-size:14px">
+			   <label class="cinza-escuro">Confirma Senha</label>
+	          <input type="password" id="user_csenha"  name="password" ng-model="user.csenha"/>
+	        </md-input-container>
+
+		    <div class="col-md-12 text-center">
+		      <md-button type="button" ng-click="cadUser($event);" class="md-fab md-accent md-hue-1">
+		      	<span class="glyphicon glyphicon-ok"></span> <!-- Register -->
+		      </md-button>
+		    </div>
+		</form>
+
+	</div>
+
+</div>

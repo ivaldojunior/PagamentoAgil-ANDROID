@@ -1,0 +1,8 @@
+Keystore Description: NNET
+Certificate Alias: NNET
+Key Passphrase: 123456
+Key Store Passphrase: 123456
+Owner Name: NNET
+Email Address: suporte@nnet.com.br
+Company: NNET
+Country: Brazil

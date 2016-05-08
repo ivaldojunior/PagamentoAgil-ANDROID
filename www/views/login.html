@@ -1,0 +1,54 @@
+<div class="white">
+
+	<div class="col-xs-12 home-logo vertical-box">
+	 
+			<img src="images/logo.png" width="228" class="home-logo-image" style="margin-left: auto; margin-right: auto;" >
+		
+	</div>
+
+	<div class="container dnone" id="formu-login">
+		<div class="col-md-push-3 col-md-6">
+
+				<form class="form-horizontal col-xs-12" role="form" id="formLogin" ng-submit="makeLogin($event);" style="margin-top:40px;" >
+					<input type="hidden" name="grant_type" value="password">
+					<input type="hidden" name="client_id" value="webV1">
+					<input type="hidden" name="client_secret" value="webV1">
+
+				    <md-input-container flex style="font-size:14px">
+				      <label class="cinza-escuro">Digite o email</label>
+			          <input type="email" id="user_email" ng-focus="apagaRegister();" 
+                             ng-blur="acendeRegister();" name="username" value=""/>
+			        </md-input-container>
+
+				  	<md-input-container flex style="font-size:14px">
+				  	  <label class="cinza-escuro">Digite a senha</label>
+			          <input type="password" id="user_senha" ng-focus="apagaRegister();" 
+                             ng-blur="acendeRegister();" name="password" value=""/>
+			        </md-input-container>
+				</form>
+
+				<div class="col-xs-12 text-right">
+					<md-button class="md-flat md-primary" aria-label="Login" ng-click="doLogin();">
+				    	Login 
+					</md-button>
+					<!-- | 
+					<md-button class="md-flat md-accent md-hue-3" aria-label="Login">
+				    	Esqueceu a senha?
+					</md-button>-->
+				</div>
+
+
+		</div>
+	</div>
+
+</div>
+<div style="position:fixed;top:50%;left:50%;margin-top:-50px;margin-left:-50px;" id="div-loadu" >
+	<md-progress-circular class="md-primary" md-mode="indeterminate" style="margin:0 auto;"></md-progress-circular>
+</div>
+
+<md-button type="button" id="bt_registro" class="home-botao-registro md-primary" 
+	ng-click="changeView('registro');" style="bottom:0;" ng-if="false">Não tem cadastro?</md-button>
+
+
+
+

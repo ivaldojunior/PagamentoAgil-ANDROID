@@ -1,0 +1,101 @@
+
+
+<!-- Begin Header -->
+<!-- -->
+
+
+<md-sidenav scroll class="md-sidenav-left md-whiteframe-z2" md-component-id="left" >
+
+  <md-toolbar class="md-accent hue-1 md-whiteframe-z1" style="background:#fff;">
+    <img src="images/logo.png" width="141" style="margin: 8px auto; outline:0;" class="menu-logos" ng-click="toggleLeft();" >
+  </md-toolbar>
+
+  <md-content class="texto-menu no-paddings" layout-padding="" ng-controller="LeftCtrl">
+    <md-button class="md-flat md-primary text-left" style=" width: 90%; " ng-click="atualiza();">
+      <span class="glyphicon glyphicon-refresh"></span> Atualizar
+    </md-button>
+    <md-button class="md-flat md-warn text-left" style=" width: 90%; " ng-click="logout();">
+      <span class="glyphicon glyphicon-off"></span> Sair
+    </md-button>
+  </md-content>
+
+</md-sidenav>
+
+
+<!-- End Header -->
+
+
+<md-content class="container container-principal no-paddings" >
+
+<div class="altura-top text-center md-whiteframe-z2">
+
+  <md-button class="md-icon-button md-accent" aria-label="refresh" 
+   style="margin-top: 22px; float: left;" ng-click="toggleLeft();">
+  <span class="glyphicon glyphicon-menu-hamburger home-icon-topbar"></span>
+</md-button>
+
+
+  <img src="images/logo.png" width="141" style=" outline:0;margin-top: 10px;" ng-click="toggleLeft();" >
+
+</div>
+
+
+
+<md-tabs md-swipe-content="false" md-center-tabs="false" md-dynamic-height md-border-bottom>
+  <md-tab label="Débitos">
+    <md-content class="md-padding no-paddings">
+
+
+
+      <!--  -->
+      <md-card class="col-md-push-3 col-md-6 no-paddings" ng-repeat="deb in debitos">
+
+        <md-card-content class="text-center no-paddings">
+            <h4>{{ deb.NomeFantasiaCedente }}</h4>
+
+            <p ng-if="deb.Demonstrativo1">
+              <small>{{ deb.Demonstrativo1 }}</small>
+            </p>
+
+            <p ng-if="deb.Demonstrativo2">
+              <small>{{ deb.Demonstrativo2 }}</small>
+            </p>
+
+            <p ng-if="deb.Demonstrativo3">
+              <small>{{ deb.Demonstrativo3 }}</small>
+            </p>
+
+            <p ng-if="deb.Demonstrativo4">
+              <small>{{ deb.Demonstrativo4 }}</small>
+            </p>
+
+            <p> 
+              <div class="col-xs-6 no-paddings">
+                Venc: {{ ((deb.Vencimento.split('T'))[0].split('-'))[2] 
+                          + '/' + ((deb.Vencimento.split('T'))[0].split('-'))[1] 
+                          + '/' + ((deb.Vencimento.split('T'))[0].split('-'))[0] }}
+              </div>
+
+              <div class="col-xs-6 no-paddings">
+                Débito: R$ {{  (deb.Valor.split('.'))[0] + ',' + (deb.Valor.split('.'))[1][0] + (deb.Valor.split('.'))[1][1]; }}
+              </div>
+            </p>
+
+            <md-button aria-label="Abri Navegador" class="md-flat-button md-primary"
+              ng-click="openUrl(deb.Url);" ng-if="deb.Url" style="width: 95%;">
+              Abrir
+            </md-button>
+
+        </md-card-content>
+
+      </md-card>
+      <!-- -->
+
+
+
+    </md-content>
+  </md-tab>
+</md-tabs>
+
+</md-content>
+
