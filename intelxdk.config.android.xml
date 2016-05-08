@@ -25,7 +25,7 @@
 <preference name="android-signed" value="true"/>
 <platform name="android">
 <preference name="Orientation" value="portrait"/></platform>
-<preference name="Fullscreen" value="true"/>
+<preference name="Fullscreen" value="false"/>
 <intelxdk:crosswalk version="16"/>
 <preference name="splashscreen" value="splash"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
