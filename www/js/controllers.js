@@ -9,6 +9,10 @@
 				$('#content_angular').attr('class','slide');
 				$location.path(view);
 			};
+            
+            $scope.openUrl = function(uri){
+	            abreLink( uri );
+			}
 
 			$scope.showAlert = function(mensagem) {
 			    $mdDialog.show(
@@ -21,6 +25,19 @@
 			        //.targetEvent(ev)
 			    );
 			};
+            
+            $scope.verificaLogin = function(ev){
+                if(ev.keyCode === 13){
+                    $('#user_senha').blur()
+                    doLogin(ev);
+                }
+            }
+            
+            $scope.verificaNext = function(ev){
+                if(ev.keyCode === 13){
+                    $('#user_senha').focus()
+                }
+            }
 
 			$scope.doLogin = function(ev){
 				if( $('#user_email').val().length > 0 && $('#user_senha').val().length > 0 ){

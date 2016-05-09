@@ -16,25 +16,38 @@
 
 				    <md-input-container flex style="font-size:14px">
 				      <label class="cinza-escuro">Digite o email</label>
-			          <input type="email" id="user_email" ng-focus="apagaRegister();" 
+			          <input type="email" id="user_email" 
+                             ng-focus="apagaRegister();"  ng-keydown="verificaNext($event)"
                              ng-blur="acendeRegister();" name="username" value=""/>
 			        </md-input-container>
 
 				  	<md-input-container flex style="font-size:14px">
 				  	  <label class="cinza-escuro">Digite a senha</label>
-			          <input type="password" id="user_senha" ng-focus="apagaRegister();" 
+			          <input type="password" id="user_senha" 
+                             ng-focus="apagaRegister();" ng-keydown="verificaLogin($event)"
                              ng-blur="acendeRegister();" name="password" value=""/>
 			        </md-input-container>
 				</form>
 
-				<div class="col-xs-12 text-right">
-					<md-button class="md-flat md-primary" aria-label="Login" ng-click="doLogin();">
-				    	Login 
-					</md-button>
-					<!-- | 
-					<md-button class="md-flat md-accent md-hue-3" aria-label="Login">
-				    	Esqueceu a senha?
-					</md-button>-->
+				<div class="col-xs-12">
+                    <p class="text-right">
+                        <md-button class="md-flat md-primary" aria-label="Login" ng-click="doLogin();" >
+                            Login 
+                        </md-button>
+                    </p>
+
+                    <p>&nbsp;</p>
+
+                    <p class="text-center">
+                    	 <md-button class="md-flat md-primary" aria-label="Forgot" ng-click="openUrl('https://contasegura.azurewebsites.net/account/recovery');" >
+                            Esqueceu a senha?
+                        </md-button> | 
+                        <md-button class="md-flat md-primary" aria-label="New account" 
+                            ng-click="openUrl('http://www.pagamentoagil.com.br/Account/SignUp');">
+                            Não tem conta de acesso? 
+                        </md-button>
+                    </p>
+
 				</div>
 
 
