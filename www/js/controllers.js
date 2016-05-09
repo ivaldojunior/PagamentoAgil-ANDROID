@@ -285,9 +285,10 @@
 			if( !isLogged() ){
 				$scope.changeView('');
 			}
-
+            
             credencial = getStorage('credencial');
-
+            
+            $scope.carregou_dados = false;
             prepareCPS(credencial ,$scope);
 		
 		};

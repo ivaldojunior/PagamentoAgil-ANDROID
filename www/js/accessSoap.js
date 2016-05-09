@@ -197,8 +197,9 @@
 
     function prepareCPS(email, xcope){
       showLoad();
+        GLOBAL_CARREGANDO_SOAP = true;
       makeCPS(email, function(XMLDoc){
-
+          
           arrayResult = Array();
           for(var i=0; i< XMLDoc.getElementsByTagName("ConsultarPorSacadoResult")[0].childNodes.length; i++){
               registro = XMLDoc.getElementsByTagName("ConsultarPorSacadoResult")[0].childNodes[i]; 
@@ -214,12 +215,16 @@
 
           xcope.$apply(function(){
             xcope.debitos = arrayResult;
+            xcope.carregou_dados = true;
             hideLoad();
-            //console.log( arrayResult );
           });
           
 
       }, function(error){
           console.log('error',error);
+           xcope.$apply(function(){
+               xcope.carregou_dados = true;
+               hideLoad();
+          });
       });
     }

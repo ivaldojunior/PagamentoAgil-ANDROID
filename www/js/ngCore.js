@@ -7,6 +7,7 @@ var GLOBAL_SERVER_LOCATION = 'http://www.pagamentoagil.com.br/';
 var GLOBAL_END_POINT_LOGIN = 'https://contasegura.azurewebsites.net/services/v2/logon.asmx';
 var GLOBAL_END_POINT_REGISTER = 'https://app-pagamentoagil.azurewebsites.net/services/v1/usuariows.asmx';
 var GLOBAL_END_POINT_CONSULTAR_COBRANCAS = 'https://app-pagamentoagil.azurewebsites.net/services/v1/cobrancaws.asmx';
+var GLOBAL_CARREGANDO_SOAP = false;
 
 	/* Inicialização do Angular */
 	var app = angular.module('pagamento-agil',['ngRoute','ngAnimate','ngMaterial']);

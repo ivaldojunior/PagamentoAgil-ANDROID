@@ -90,6 +90,15 @@
 
       </md-card>
       <!-- -->
+      
+    <md-card class="col-md-push-3 col-md-6 no-paddings" ng-if="!( debitos.length > 0 )">
+        <md-card-content class="text-center no-paddings" ng-if="carregou_dados">
+            <h4> Nenhum débito encontrado </h4>
+        </md-card-content>
+        <md-card-content class="text-center no-paddings" ng-if="!carregou_dados">
+            <h4> Carregando Débitos... </h4>
+        </md-card-content>
+    </md-card>
 
 
 
